@@ -1,0 +1,170 @@
+
+@mixin com_company_demotodo-halo-ext {
+
+
+   /* GroupBox caption size*/
+   .groupBoxCaptionSize span.c-groupbox-caption-text{
+       font-size:20px;
+   }
+
+   /* CssLayout scrollbar style */
+   .csslayout-properties{
+        overflow: auto;
+   }
+
+   /* Dashboard min height */
+   .ddvbox-minsize{
+        min-height: 100%;
+   }
+
+   /* Background style for each HBox in dashboard */
+   .dashboard-chat{
+        background-color: #dce7f3;
+        border-style: solid;
+        border-width: 1px;
+        height: 42px;
+        padding: 5px;
+        border-color: #bbbbbb;
+   }
+
+   .dashboard-call{
+        background-color: #cadff5;
+        border-style: solid;
+        border-width: 1px;
+        height: 42px;
+        padding: 5px;
+        border-color: #bbbbbb;
+   }
+
+   .dashboard-meeting{
+        background-color: #dbdbdb;
+        border-style: solid;
+        border-width: 1px;
+        height: 42px;
+        padding: 5px;
+        border-color: #bbbbbb;
+   }
+
+   .dashboard-dinner{
+        background-color: #d0d8e0;
+        border-style: solid;
+        border-width: 1px;
+        height: 42px;
+        padding: 5px;
+        border-color: #bbbbbb;
+   }
+
+   .dashboard-buy{
+        background-color: #dadfff;
+        border-style: solid;
+        border-width: 1px;
+        height: 42px;
+        padding: 5px;
+        border-color: #bbbbbb;
+   }
+
+   .dashboard-other{
+        background-color: #eae0ff;
+        border-style: solid;
+        border-width: 1px;
+        height: 42px;
+        padding: 5px;
+        border-color: #bbbbbb;
+   }
+
+   /* countLabel style*/
+   .label-count{
+        color: #684b57;
+        font-size: 15pt;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #bbbbbb;
+        text-align: center;
+   }
+   /*   border-radius: 30px; */
+
+
+   /*  Buttons styling  */
+
+   /* CALL */
+   .button-call{
+        color:black;
+        font-size:20px;
+        text-align: left;
+   }
+
+   .button-call span.v-icon{
+        color:#94c2f3;
+   }
+
+   /* CHAT */
+   .button-chat{
+        color:black;
+        font-size:20px;
+        text-align: left;
+   }
+
+   .button-chat span.v-icon{
+        color:#9db2c7;
+   }
+
+   /* MEETING */
+   .button-meeting{
+        color:black;
+        font-size:20px;
+        text-align: left;
+   }
+
+   .button-meeting span.v-icon{
+        color:#c7c7c7;
+   }
+
+   /* DINNER */
+   .button-dinner{
+        color:black;
+        font-size:20px;
+        text-align: left;
+   }
+
+   .button-dinner span.v-icon{
+        color:#a2bcd6;
+   }
+
+   /* BUY */
+   .button-buy{
+        color:black;
+        font-size:20px;
+        text-align: left;
+   }
+
+   .button-buy span.v-icon{
+        color:#909ce8;
+   }
+
+   /* OTHER */
+   .button-other{
+        color:black;
+        font-size:20px;
+        text-align: left;
+   }
+
+   .button-other span.v-icon{
+        color:#a390cc;
+   }
+
+   /* REMOVE */
+   .button-remove{
+        background: 0,0,0,0;
+        border: 0px;
+   }
+
+   .button-remove:focus::after{
+        -webkit-box-shadow: none;
+         box-shadow: none;
+         border:none;
+   }
+
+   .button-remove span.v-icon{
+        color:black;
+   }
+}

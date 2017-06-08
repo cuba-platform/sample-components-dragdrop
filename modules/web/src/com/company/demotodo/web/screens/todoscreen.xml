@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://caption"
+        class="com.company.demotodo.web.screens.TodoScreen"
+        messagesPack="com.company.demotodo.web.screens"
+        xmlns:dnd="http://schemas.haulmont.com/dnd/0.1/drag-and-drop.xsd">
+    <dialogMode height="600"
+                width="800"/>
+    <layout>
+        <hbox id="root"
+              expand="rootSpacer"
+              height="100%"
+              spacing="true"
+              width="100%">
+            <groupBox id="rootPalette"
+                      caption="Todo actions"
+                      height="100%"
+                      stylename="groupBoxCaptionSize"
+                      width="200px">
+                <dnd:dndVBoxLayout id="palette"
+                                   dragMode="CLONE"
+                                   height="AUTO"
+                                   spacing="true"
+                                   width="100%">
+                    <button id="call"
+                            caption="Call"
+                            height="40px"
+                            icon="font-icon:PHONE"
+                            stylename="button-call"
+                            width="100%"/>
+                    <button id="chat"
+                            caption="Chat"
+                            height="40px"
+                            icon="font-icon:COMMENTING_O"
+                            stylename="button-chat"
+                            width="100%"/>
+                    <button id="meeting"
+                            caption="Meeting"
+                            height="40px"
+                            icon="font-icon:USER"
+                            stylename="button-meeting"
+                            width="100%"/>
+                    <button id="dinner"
+                            caption="Dinner"
+                            height="40px"
+                            icon="font-icon:CUTLERY"
+                            stylename="button-dinner"
+                            width="100%"/>
+                    <button id="buy"
+                            caption="Buy"
+                            height="40px"
+                            icon="font-icon:CART_PLUS"
+                            stylename="button-buy"
+                            width="100%"/>
+                    <button id="other"
+                            caption="Other"
+                            height="40px"
+                            icon="font-icon:BOOK"
+                            stylename="button-other"
+                            width="100%"/>
+                </dnd:dndVBoxLayout>
+            </groupBox>
+            <groupBox id="rootDashboard"
+                      caption="Todo today"
+                      height="100%"
+                      stylename="groupBoxCaptionSize"
+                      width="500px">
+                <cssLayout height="100%"
+                           stylename="csslayout-properties"
+                           width="100%">
+                    <dnd:dndVBoxLayout id="dashboard"
+                                       dragMode="CLONE"
+                                       height="AUTO"
+                                       spacing="true"
+                                       stylename="ddvbox-minsize"
+                                       width="100%">
+                    </dnd:dndVBoxLayout>
+                </cssLayout>
+            </groupBox>
+            <label id="rootSpacer"/>
+        </hbox>
+    </layout>
+</window>
