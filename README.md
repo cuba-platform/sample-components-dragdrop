@@ -1,12 +1,12 @@
 ### Drag and Drop
 
 It is sample of using [cuba-dnd](https://github.com/cuba-platform/cuba-dnd) add-on.  
-In this small app users can drag buttons that predefined a to-do-actions and make a to-do-list.
+In this small app users can drag buttons with predefined todo-actions to make a todo-list.
 
 General view of the application:  
 ![](/screenshots/1-General-view.png "General view of application")
 
-Adding new to-do-action:
+Adding a new todo-action:
 ![](/screenshots/2-Adding-new-to-do-action.png "Adding new to-do-action")
 
 Reordering items:  
