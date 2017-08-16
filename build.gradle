@@ -43,8 +43,7 @@ cuba {
 }
 
 dependencies {
-    appComponent("com.haulmont.addon.dnd:cubadnd-global:0.1-SNAPSHOT")
-
+    appComponent("com.haulmont.addon.dnd:cuba-dnd-global:1.0.1")
 }
 
 def hsql = 'org.hsqldb:hsqldb:2.2.9'
