@@ -2,7 +2,6 @@
 buildscript {
     ext.cubaVersion = '6.7.3'
     repositories {
-        mavenLocal()
         maven {
             url 'https://repo.cuba-platform.com/content/groups/work'
             credentials {
@@ -43,7 +42,7 @@ cuba {
 }
 
 dependencies {
-    appComponent("com.haulmont.addon.dnd:cuba-dnd-global:1.0.1")
+    appComponent("com.haulmont.addon.dnd:cuba-dnd-global:1.1.0")
 }
 
 def hsql = 'org.hsqldb:hsqldb:2.2.9'
