@@ -3,4 +3,6 @@
     <include file="com/company/demotodo/screens.xml"/>
     <screen id="todoscreen"
             template="com/company/demotodo/web/screens/todoscreen.xml"/>
+    <screen id="mainWindow"
+            template="com/company/demotodo/web/screens/ext-mainwindow.xml"/>
 </screen-config>

@@ -1,6 +1,6 @@
 
 buildscript {
-    ext.cubaVersion = '6.7.3'
+    ext.cubaVersion = '6.8.1'
     repositories {
         maven {
             url 'https://repo.cuba-platform.com/content/groups/work'
@@ -39,10 +39,13 @@ cuba {
     tomcat {
         dir = "$project.rootDir/deploy/tomcat"
     }
+    ide {
+        vcs = 'Git'
+    }
 }
 
 dependencies {
-    appComponent("com.haulmont.addon.dnd:cuba-dnd-global:1.1.0")
+    appComponent("com.haulmont.addon.dnd:cuba-dnd-global:1.2.0")
 }
 
 def hsql = 'org.hsqldb:hsqldb:2.2.9'
@@ -229,7 +232,7 @@ task restart(dependsOn: ['stop', ':app-core:deploy', ':app-web:deploy'], descrip
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '3.1'
+    gradleVersion = '4.3.1'
 }
 
 apply from: 'extra.gradle'
