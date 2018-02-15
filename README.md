@@ -12,4 +12,4 @@ Adding a new todo-action:
 Reordering items:  
 ![](/screenshots/3-Reordering-items.png "Reordering items")
 
-Based on CUBA Platform 6.7.3
+Based on CUBA Platform 6.8.1
