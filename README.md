@@ -1,4 +1,4 @@
-### Drag and Drop
+# Drag and Drop with UI components
 
 It is sample of [cuba-dnd](https://github.com/cuba-platform/cuba-dnd) add-on.  
 In this small app users can drag buttons with predefined todo-actions to make a todo-list.
