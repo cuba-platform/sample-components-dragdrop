@@ -15,3 +15,6 @@ Reordering items:
 <img src="https://raw.githubusercontent.com/cuba-platform/sample-components-dragdrop/master/screenshots/3-Reordering-items.png" width="400" alt="Reordering items">
 
 Based on CUBA Platform 6.9.1
+
+## Issues
+Please use https://www.cuba-platform.com/discuss for discussion, support, and reporting problems coressponding to this sample.
