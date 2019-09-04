@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
         caption="msg://caption"
-        class="com.company.demotodo.web.screens.TodoScreen"
         messagesPack="com.company.demotodo.web.screens"
         xmlns:dnd="http://schemas.haulmont.com/dnd/0.1/drag-and-drop.xsd">
     <dialogMode height="600"

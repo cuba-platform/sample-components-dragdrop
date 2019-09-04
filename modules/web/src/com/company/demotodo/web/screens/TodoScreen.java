@@ -1,9 +1,13 @@
 package com.company.demotodo.web.screens;
 
 import com.google.common.collect.Iterables;
+import com.haulmont.cuba.gui.UiComponents;
 import com.haulmont.cuba.gui.components.*;
 import com.haulmont.cuba.gui.components.actions.BaseAction;
-import com.haulmont.cuba.gui.xml.layout.ComponentsFactory;
+import com.haulmont.cuba.gui.screen.Screen;
+import com.haulmont.cuba.gui.screen.Subscribe;
+import com.haulmont.cuba.gui.screen.UiController;
+import com.haulmont.cuba.gui.screen.UiDescriptor;
 import com.haulmont.cuba.web.theme.HaloTheme;
 import com.haulmont.addon.dnd.components.DDVerticalLayout;
 import com.haulmont.addon.dnd.components.DDVerticalLayoutTargetDetails;
@@ -13,16 +17,16 @@ import com.haulmont.addon.dnd.components.acceptcriterion.AcceptCriterion;
 import com.haulmont.addon.dnd.components.dragevent.DragAndDropEvent;
 import com.haulmont.addon.dnd.components.enums.VerticalDropLocation;
 
-
 import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
-public class TodoScreen extends AbstractWindow {
+@UiController("TodoScreen")
+@UiDescriptor("todoscreen.xml")
+public class TodoScreen extends Screen {
 
     @Inject
-    private ComponentsFactory factory;
+    private UiComponents uiComponents;
 
     @Inject
     private DDVerticalLayout dashboard;
@@ -34,8 +38,8 @@ public class TodoScreen extends AbstractWindow {
     private List<String> goodsList;
     private List<String> restaurantsList;
 
-    @Override
-    public void init(Map<String, Object> params) {
+    @Subscribe
+    public void onInit(InitEvent initEvent) {
         initSampleData();
         addCreateActions();
 
@@ -95,16 +99,16 @@ public class TodoScreen extends AbstractWindow {
     }
 
     public Component createDashboardElement(Component component) {
-        HBoxLayout layout = factory.createComponent(HBoxLayout.class);
+        HBoxLayout layout = uiComponents.create(HBoxLayout.class);
         layout.setStyleName("dashboard-" + component.getId());
         layout.setWidth("100%");
         layout.setSpacing(true);
 
-        Label countLabel = factory.createComponent(Label.class);
+        Label countLabel = uiComponents.create(Label.class);
         countLabel.setStyleName("label-count");
         countLabel.setWidth("30px");
 
-        Label titleLabel = factory.createComponent(Label.class);
+        Label titleLabel = uiComponents.create(Label.class);
         titleLabel.setValue(((Button) component).getCaption());
         titleLabel.setStyleName("h1");
         titleLabel.setWidth("85px");
@@ -115,14 +119,14 @@ public class TodoScreen extends AbstractWindow {
         Component field = createField(component.getId());
         layout.add(field);
 
-        Button deleteButton = factory.createComponent(Button.class);
+        Button deleteButton = uiComponents.create(Button.class);
         deleteButton.addStyleName(HaloTheme.BUTTON_BORDERLESS_COLORED);
         deleteButton.addStyleName("button-remove");
         deleteButton.setIcon("font-icon:TIMES");
         BaseAction action = new BaseAction("remove") {
             @Override
             public void actionPerform(Component component) {
-                Component.Container hBox = (Component.Container) component.getParent();
+                ComponentContainer hBox = (ComponentContainer) component.getParent();
                 DDVerticalLayout ddLayout = (DDVerticalLayout) hBox.getParent();
                 ddLayout.remove(hBox);
                 updateDashboardComponents(ddLayout);
@@ -140,9 +144,9 @@ public class TodoScreen extends AbstractWindow {
     private Component createField(String id) {
         Component field;
         if (id.equals("other")) {
-            field = factory.createComponent(TextField.class);
+            field = uiComponents.create(TextField.class);
         } else {
-            field = factory.createComponent(LookupField.class);
+            field = uiComponents.create(LookupField.class);
             if (id.equals("call") || id.equals("chat") || id.equals("meeting")) {
                 ((LookupField) field).setOptionsList(contactsList);
             } else if (id.equals("dinner")) {
